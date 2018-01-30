@@ -2,6 +2,8 @@
     <h1>User Info</h1>
 </div>
 
+<%= link_to 'Users', controller: 'users' %> | <%= link_to 'Home', controller: 'welcome' %>
+
 <%= form_for @user do |form| %>
 
   <% if @user.errors.any? %>
@@ -23,16 +25,16 @@
   </p>
 
   <div>
-    <%= form.label :phone_number, "Phone number:" %>
+    <%= form.label :phone_number %><br>
     <%= form.telephone_field :phone_number %>
   </div>
   
   <p>
-    <%= form.label :note %><br>
+    <%= form.label 'Enter text to be sent' %><br>
     <%= form.text_area :note %>
   </p>
   
   <p>
-    <%= form.submit %>
+    <%= form.submit 'Send Text', :name => 'create' %>  <%= form.submit "clear", :type => "reset" %>
   </p>
 <% end %>
