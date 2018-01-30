@@ -1,0 +1,14 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.ctm-logo {
+  background-image: url('/assets/logo.png');
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+  background-position: left;
+  
+  h1 {
+    padding-left: 40px;
+    font: 24px/32px Noto Sans, sans-serif;
+  }
+}

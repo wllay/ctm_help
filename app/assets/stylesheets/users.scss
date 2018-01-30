@@ -1,0 +1,26 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-logo {
+    background-image: url('/assets/user.png');
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: left;
+   
+    h1 {
+      padding-left: 40px;
+      font: 24px/32px Noto Sans, sans-serif;
+    }
+}
+
+.users-logo {
+    background-image: url('/assets/users.png');
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: left;
+   
+    h1 {
+      padding-left: 40px;
+      font: 24px/32px Noto Sans, sans-serif;
+    }
+}

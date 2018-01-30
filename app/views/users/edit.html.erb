@@ -1,0 +1,40 @@
+<h1>Edit User</h1>
+ 
+<%= form_with(model: @user) do |form| %>
+ 
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :phone_number %><br>
+    <%= form.text_field :phone_number %>
+  </p>
+ 
+  <p>
+    <%= form.label :note %><br>
+    <%= form.text_area :note %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', users_path %>

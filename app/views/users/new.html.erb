@@ -1,0 +1,38 @@
+<div class="user-logo">
+    <h1>User Info</h1>
+</div>
+
+<%= form_for @user do |form| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <div>
+    <%= form.label :phone_number, "Phone number:" %>
+    <%= form.telephone_field :phone_number %>
+  </div>
+  
+  <p>
+    <%= form.label :note %><br>
+    <%= form.text_area :note %>
+  </p>
+  
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
