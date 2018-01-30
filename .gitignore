@@ -20,4 +20,8 @@
 /node_modules
 /yarn-error.log
 
+
+# Ignore local_env.yml
+/config/local_env.yml
+
 .byebug_history

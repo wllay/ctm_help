@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 class UsersController < ApplicationController
   def index
     @users = User.all
@@ -52,9 +54,9 @@ class UsersController < ApplicationController
   private
 
   def send_message(message,phone_number)
-    twilio_number = '+14432143863'
-    account_sid = 'ACe8e0fbc0905829b77c467cec04338ada'
-    auth_token = 'b58743ba80f37d17a101c972abc784af'
+    twilio_number = ENV['TWILIO_NUMBER']
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
 
     begin
       @client = Twilio::REST::Client.new account_sid, auth_token
